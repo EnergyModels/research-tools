@@ -10,8 +10,8 @@ from prepare_monte_carlo_inputs import monteCarloInputs, baselineInputs
 
 def simple_model(a=1.0, b=2.0, c=3.0, d=4.0):
 
-    x = a ** b / c + d
-    y = a + b ** c - d
+    x = a + b / c + d
+    y = a + b -2* c - d
 
     return x, y
 
@@ -53,8 +53,8 @@ if __name__ == '__main__':
 
     # Monte Carlo Inputs
     xls_filename = "inputs_monte_carlo.xlsx"
-    sheetnames = ["case1","case2"]
-    iterations = 1000
+    sheetnames = ["case1","case2","case3","case4"]
+    iterations = 100
 
     # Constants
     constants = pd.Series(index=['d'])
